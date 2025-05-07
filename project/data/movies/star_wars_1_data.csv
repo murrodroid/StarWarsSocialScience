@@ -183,7 +183,7 @@ id;from;to;text;text to check;where;number;nouns;determiners;conjuctions;adjecti
 181;CAPT. PANAKA;SOLDIER;Get their weapons.;;EXT. PALACE - PLAZA - DAY;3;0;0;0;0;0;0;0;0;0;27
 182;JAR JAR;QUI-GON;Yousa guys bombad!;;EXT. PALACE - PLAZA - DAY;3;0;0;0;0;0;0;0;0;0;27
 183;QUI-GON;AMIDALA;Your Highness, we are the Ambassadors, for the Supreme Chancellor.;;EXT. PALACE - PLAZA - DAY;10;0;0;0;0;0;0;0;0;0;90
-184;BIBBLE;QUI-GON :Your negotiations seem;;;EXT. PALACE - PLAZA - DAY;0;0;0;0;0;0;0;0;0;0;0
+184;BIBBLE;QUI-GON ;Your negotiations seem;;EXT. PALACE - PLAZA - DAY;0;0;0;0;0;0;0;0;0;0;0
 185;QUI-GON;BIBBLE;The negotiations never took place. Your Highness, we must make contact with the republic.;;EXT. PALACE - PLAZA - DAY;14;0;0;0;0;0;0;0;0;0;126
 186;CAPT. PANAKA;QUI-GON;They've knocked out all our communications.;;EXT. PALACE - PLAZA - DAY;6;0;0;0;0;0;0;0;0;0;54
 187;QUI-GON;CAPT. PANAKA;Do you have transports?;;EXT. PALACE - PLAZA - DAY;4;0;0;0;0;0;0;0;0;0;36
@@ -192,7 +192,7 @@ id;from;to;text;text to check;where;number;nouns;determiners;conjuctions;adjecti
 190;QUI-GON;AMIDALA;That won't be a problem. Your Highness, under the circumstances, I suggest you come to Coruscant with us.;;INT. CENTRAL HANGER - HALLWAY - DAY;18;0;0;0;0;0;0;0;0;0;162
 191;AMIDALA;QUI-GON;Thank you, Ambassador, but my place is here with my people.;;INT. CENTRAL HANGER - HALLWAY - DAY;11;0;0;0;0;0;0;0;0;0;99
 192;QUI-GON;AMIDALA;They will kill you if you stay.;;INT. CENTRAL HANGER - HALLWAY - DAY;7;0;0;0;0;0;0;0;0;0;63
-193;BIBBLE;QUI-GON :They wouldn't dare.;;;INT. CENTRAL HANGER - HALLWAY - DAY;0;0;0;0;0;0;0;0;0;0;0
+193;BIBBLE;QUI-GON;They wouldn't dare.;;INT. CENTRAL HANGER - HALLWAY - DAY;0;0;0;0;0;0;0;0;0;0;0
 194;CAPT. PANAKA;QUI-GON;They need her to sign a treaty to make this invasion of theirs legal. They can't afford to kill her.;;INT. CENTRAL HANGER - HALLWAY - DAY;20;0;0;0;0;0;0;0;0;0;180
 195;QUI-GON;AMIDALA;The situation here is not what it seems. There is something else behind all this, Your Highness. There is no logic in the Federation's move here. My feelings tell me they will destroy you.;;INT. CENTRAL HANGER - HALLWAY - DAY;34;0;0;0;0;0;0;0;0;0;306
 196;BIBBLE;AMIDALA;Our only hope is for the Senate to side with us Senator Palpatine will need your help.;;INT. CENTRAL HANGER - HALLWAY - DAY;17;0;0;0;0;0;0;0;0;0;153
