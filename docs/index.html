@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galactic Network & Text Analysis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-bg">
+      <!-- Static Star Wars header section with background -->
+      <div class="overlay">
+        <h1>Mapping the Galaxy</h1>
+        <p>Network & Text Analysis in the Star Wars Universe</p>
+      </div>
+    </div>
+  </header>
+
+  <section id="intro">
+    <h2>Introduction: A Data Analysis in a Galaxy Far, Far Away...</h2>
+    <p>In this project, we analyze communication and conflict across the Star Wars universe using network and text analysis. The datasets includes characters, character attributes, and movie dialouges from the 6 first episodes. 
+      The data is gathered by web-scraping characters and character pages from Wookieepedia, and using StarWars API to fill out missing information. The movie scripts comes from a dataset</p>
+    <a href="data/starwars_dataset.csv" download class="download-link">Download Dataset</a>
+  </section>
+
+  <section id="overview">
+    <h2>Network Overview: Who connects the Galaxy?</h2>
+    <p>Here’s a breakdown of the basic metrics of the Network, exploring central characters across the 6 episodes.</p>
+    <p>Number of nodes in Network:  152</p>
+    <p>Number of edges in Network:  623</p>
+
+    <p><b>Degree:</b> Top 5 Characters with most connections</p>
+    <ul>
+      <li>C-3PO: 64 </li>
+      <li>Anakin: 58 </li>
+      <li>Obi-Wan: 58 </li>
+      <li>Padme: 58 </li>
+      <li>Luke: 44 </li>
+    </ul>
+    <p>Interpretation: These are the characters which are included in the most scenes, i.e. main characters (at least determined by screen time)</p>
+    
+
+    <p><b>Centrality:</b> Which characters are bridges between groups</p>
+    <ul>
+      <li>C-3PO: 0.242 </li>
+      <li>Obi-Wan: 0.203 </li>
+      <li>Anakin: 0.150 </li>
+      <li>Padme: 0.149 </li>
+      <li>Luke: 0.110 </li>
+    </ul>
+    <p>Interpretation: C-3PO is the most common characters bridging gaps between otherwise unconnected nodes, i.e. he is in the "middle". The other characters represent this as well, although not as big scale.</p>
+    
+
+    <p><b>Closeness:</b> Who has access to others quickly? (in terms of dialogue chains)</p>
+    <ul>
+      <li>C-3PO: 0.614 </li>
+      <li>Obi-Wan: 0.596 </li>
+      <li>Anakin: 0.579 </li>
+      <li>Padme: 0.546 </li>
+      <li>Luke: 0.536 </li>
+    </ul>
+    <p>Interpretation: This displays the connectedness/closeness of characters. It makes sense that C-3PO is also close to many, as he is also connecting many in Centrality.</p>
+
+    <p>Moreover, characters like Obi-Wan and Anakin rank highly, reflecting their roles as main parts of the story that make connections across different groups. High closeness indicates that these characters can rapidly distribute information or influence through our network, making them key characters of the plot.  </p>
+
+  </section>
+
+  <section id="network">
+    <h2>Network Analysis: Communities</h2>
+    <p>Our network graph shows how characters interact across episodes.</p>
+    <img src="assets/Network_graph.png" alt="Network Graph" class="network-image">
+    <img src="assets/Community_network_graph.png" alt="Community Network Graph" class="network-image">
+    <h2>All 7 Communities</h2>
+    <p>Below is walkthrough of each community, showing: most notable characters, 3 most common attributes, as well as word-cloud for relevant communities. Including intepretation of community and word-cloud.</p>
+
+  <details>
+    <summary><strong>Community 0 (Size: 32)</strong></summary>
+    <p><em>Notable Characters:</em> Yoda, Palpatine, Mace Windu...</p>
+    <p>top 3 common attributes for community, showing community percentage, global percentage, and difference</p>
+    <ul>
+      <li><strong>Trilogy = 1:</strong> community 90.6%, global 50.8%, diff 39.8%</li>
+      <li><strong>Affiliation = Galactic Republic:</strong> community 50.0%, global 11.4%, diff 38.6%</li>
+      <li><strong>Species = Human (clone):</strong> community 28.1%, global 6.3%, diff 21.8%</li>
+    </ul>
+
+    <p>Interpretation: This community is primarily composed of characters from the Galactic Republic, with a significant number of clones. The high percentage of characters affiliated with the Galactic Republic suggests a focus on the Clone Wars era.</p>
+    <img src="assets/community0_cloud.png" alt="Community 0 Word Cloud" class="word-cloud">
+
+    <p><b>Intepretation:</b> words like 'jedi', 'chancellor', 'republ' are used, indicating they are the "good guys", also backed up by the fact they are mostly from Galactic Republic. The words are more based on the first trilogy, as 'anakin', 'dooku', 'grievious' are all names of characters that only appear in the first trilogy. This community to some degree shows the Republic, the characters of it and some of the clone wars.
+    </p>
+  </details>
+
+  <details>
+    <summary><strong>Community 1 (Size: 2)</strong></summary>
+    <p><em>Notable Characters:</em> Aayla, Bly...</p>
+    <p>top 3 common attributes for community, showing community percentage, global percentage, and difference</p>
+    <ul>
+      <li><strong>From = aayla:</strong> community 50.0%, global 0.4%, diff 49.6%</li>
+      <li><strong>Death = 19 BBY, Felucia:</strong> community 50.0%, global 0.4%, diff 49.6%</li>
+      <li><strong>Height = 1.7 meters (5 ft, 7 in):</strong> community 50.0%, global 0.4%, diff 49.6%</li>
+    </ul>
+    <p>Very small community of 2 and nothing is mathcing between them from the attributes view. </p>
+  </details>
+
+  <details>
+    <summary><strong>Community 2 (Size: 36)</strong></summary>
+    <p><em>Notable Characters:</em> Luke, Han Solo, C-3PI...</p>
+    <p>top 3 common attributes for community, showing community percentage, global percentage, and difference</p>
+    <ul>
+      <li><strong>Trilogy = 2:</strong> community 80.6%, global 43.3%, diff 37.2%</li>
+      <li><strong>Gender = Male:</strong> community 58.3%, global 34.3%, diff 24.1%</li>
+      <li><strong>Species = Human:</strong> community 41.7%, global 25.2%, diff 16.5%</li>
+    </ul>
+    <p>Characters from second triology (episode 4-6), containing mostly male human characters. Again the rest are most likely  highly connected to the male humans from trilogy 2.</p>
+    <img src="assets/community2_cloud.png" alt="Community 2 Word Cloud" class="word-cloud">
+    <p><b>Intepretation:</b>  we see a large amount of characters from the second trilogy, i.e. 'artoo', 'jabba', 'chewy', 'han'. furthermore we see the connection between han solo and chewbacca, as han solo is the one calling him 'chewy' throughout the movies. It most likely is a connection of scenes following Han Solo and the crew (Chewy and Leia) that he travels with.</p>
+  </details>
+
+  <details>
+    <summary><strong>Community 3 (Size: 2)</strong></summary>
+    <p><em>Notable Characters:</em> Owo-1, Tc14...</p>
+    <p>top 3 common attributes for community, showing community percentage, global percentage, and difference</p>
+    <ul>
+      <li><strong>Affiliation = Trade Federation:</strong> community 100.0%, global 2.8%, diff 97.2%</li>
+      <li><strong>From = owo-1:</strong> community 50.0%, global 0.4%, diff 49.6%</li>
+      <li><strong>Death = 32 BBY, Saak'ak, Naboo system:</strong> community 50.0%, global 0.4%, diff 49.6%</li>
+    </ul>
+    <p>Containing 2 characters only connected by their affilation, The Trade Federation.</p>
+  </details>
+
+  <details>
+    <summary><strong>Community 4 (Size: 22)</strong></summary>
+    <p><em>Notable Characters:</em> Biggs, Wedge, Tarkin...</p>
+    <p>top 3 common attributes for community, showing community percentage, global percentage, and difference</p>
+    <ul>
+      <li><strong>Trilogy = 2:</strong> community 95.5%, global 43.3%, diff 52.1%</li>
+      <li><strong>Species = Human:</strong> community 63.6%, global 25.2%, diff 38.4%</li>
+      <li><strong>Gender = Male:</strong> community 45.5%, global 34.3%, diff 11.2%</li>
+    </ul>
+    <p>This community is close to community 2 in their most shared attributes being trilogy 2, human males.</p>
+    <img src="assets/community4_cloud.png" alt="Community 4 Word Cloud" class="word-cloud">
+    <p><b>Intepretation:</b>The wordcloud gives insight to why it is seperated from community 2. Since the communities are based on scenes, we can clearly see that community 4 describes space and space battle scenes including Luke Skywalker. Words like "frigat", "fighter", "station", "battl", "headset", "speaker", "shot", "bushpilot", "fleet" and "tractor" show a connection to space and space warfare. It may not seem  like it if you dont know Star Wars, but it definitely is words that put together represent space scenes. A lot of the smaller words also seem like they describe the first part of movie 4 where the Frigat is invaded by the empire. Other scenes could also be made out more including Luke Skywalker.</p>
+  </details>
+
+  <details>
+    <summary><strong>Community 5 (Size: 53)</strong></summary>
+    <p><em>Notable Characters:</em> Anakin, Obi-Wan, Padme...</p>
+    [('anakin', 631), ('obi-wan', 574), ('padme', 387)]
+    <p>top 3 common attributes for community, showing community percentage, global percentage, and difference</p>
+    <ul>
+      <li><strong>Trilogy = 1:</strong> community 94.3%, global 50.8%, diff 43.6%</li>
+      <li><strong>Gender = Male:</strong> community 49.1%, global 34.3%, diff 14.8%</li>
+      <li><strong>Species = Human:</strong> community 35.8%, global 25.2%, diff 10.7%</li>
+    </ul>
+    <p>Characters from triology 1, mostly male humans. The members that are not male or human are most likely highly connected to males and humans.</p>
+    <img src="assets/community5_cloud.png" alt="Community 5 Word Cloud" class="word-cloud">
+    <p><b>Intepretation:</b>This community heavily represents Anakin and his time in the first trilogy. 'Anakin', is of course here. Also words like 'anni' which is Padme's nickname for anakin, 'master' from anakin to Obi Wan. 'Jedi', 'master', 'beep', 'love', and 'chancellor' also appear showing the complexeity of Anakins situation regarding the Republic and his love for Padme. It is a great represenation of his thoughts, emotions and how he ends up in the finale of the third film joining the dark side.</p>
+  </details>
+
+  <details>
+    <summary><strong>Community 6 (Size: 5)</strong></summary>
+    <p><em>Notable Characters:</em> Piett, Veers, Needa...</p>
+    <p>top 3 common attributes for community, showing community percentage, global percentage, and difference</p>
+    <ul>
+      <li><strong>Species = Human:</strong> community 100.0%, global 25.2%, diff 74.8%</li>
+      <li><strong>Trilogy = 2:</strong> community 100.0%, global 43.3%, diff 56.7%</li>
+      <li><strong>Affiliation = Galactic Republic:</strong> community 60.0%, global 11.4%, diff 48.6%</li>
+    </ul>
+    <p>Small group of humans from the second trilogy, 3/5 being affiliated with the Galactic republic.</p>
+    <img src="assets/community6_cloud.png" alt="Community 6 Word Cloud" class="word-cloud">
+    <p><b>Intepretation:</b>Community 6 does not seem to show anything clearly, 'Hoth' is an iceplanet from the beginning of movie 5. 'millenium' refrences the millenium falcon Han Solo flies, 'lord' and 'vader' show some connection to the empire. 'fleet', 'cloak'  and 'tractor' is all connection to space terms. Looking further down it seems to overall represent some space and battle relation. Nothing else can be concluded, but unlike community 4, Luke Skywalker is not a main part here.</p>
+  </details>
+  </section>
+
+
+  <section id="insights">
+    <h2>Key Insights from the Galaxy</h2>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </section>
+
+  <section id="downloads">
+    <h2>Downloads & Explainer Notebook</h2>
+    <p>Explore and replicate the analysis:</p>
+    <ul>
+      <li><a href="data/cleaned_starwars.csv" download>Cleaned Dataset</a></li>
+      <li><a href="data/starwars_network.gexf" download>Network Graph File</a></li>
+      <li><a href="https://nbviewer.org/url/YOUR_NOTEBOOK_LINK_HERE" target="_blank">Explainer Notebook (nbviewer)</a></li>
+    </ul>
+  </section>
+
+  <section id="references">
+    <h2>References</h2>
+    <ul style="list-style-type: none; padding-left: 0;">
+      <li>[1] Wookieepedia, *The Star Wars Wiki*, Fandom. [Online]. Available: https://starwars.fandom.com</li>
+      <li>[2] P. Hallett, *The Star Wars API (SWAPI)*. [Online]. Available: https://swapi.dev</li>
+      <li>[3] jcwieme, *data-scripts-star-wars*, Movie Scripts. [Online]. Available: https://github.com/jcwieme/data-scripts-star-wars</li></li>
+      <li>[4] </li>
+      <li>[5] </li>
+    </ul>
+  </section>
+  
+  <footer>
+    <p>Made by Christian Nickelsen, Lucas Mortensen, Mads Højgaard • DTU • <a href="mailto:your@email.com">Contact</a></p>
+    <p>May the Data Be With You</p>
+  </footer>
+</body>
+</html>

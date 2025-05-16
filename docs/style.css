@@ -81,3 +81,41 @@ footer {
   color: #aaa;
   font-size: 0.9rem;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px;
+  padding: 20px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+#communities ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#communities li {
+  margin-bottom: 10px;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
