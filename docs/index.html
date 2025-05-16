@@ -8,7 +8,6 @@
 </head>
 
 <body>
-  <!-- ─────────────────────── HEADER ─────────────────────── -->
   <header>
     <div class="header-bg">
       <div class="overlay">
@@ -18,11 +17,10 @@
     </div>
   </header>
 
-  <!-- ─────────────────────── INTRO ─────────────────────── -->
   <section id="intro">
     <h2>Introduction: A Data Analysis in a Galaxy Far, Far Away…</h2>
     <p>
-      This project presents a social-science analysis of the Star Wars Universe covering Episodes I–VI.<br><br>
+      This project presents a social-science analysis of the Star Wars Universe covering Episodes I-VI.<br><br>
       Using a dialogue dataset <a href="#references">[3]</a>, we built a character interaction network: each
       character (node) is linked to every other character appearing in the same scene. By web-scraping
       Wookieepedia <a href="#references">[1]</a> and enriching it with the Star Wars API (SWAPI) <a href="#references">[2]</a>,
@@ -36,10 +34,9 @@
     </a>
   </section>
 
-  <!-- ─────────────────────── OVERVIEW ─────────────────────── -->
   <section id="overview">
     <h2>Network Overview: Who Connects the Galaxy?</h2>
-    <p>Basic metrics for the character network across Episodes I–VI:</p>
+    <p>Basic metrics for the character network across Episodes I-VI:</p>
   
     <div class="table-wrapper">
       <table class="metric-table">
@@ -105,7 +102,6 @@
   </section>
   
 
-  <!-- ─────────────────────── NETWORK ─────────────────────── -->
   <section id="network">
     <h2>Network Analysis: Communities</h2>
     <p>The graphs below illustrate character interactions and the detected communities.</p>
@@ -119,7 +115,6 @@
     <h2>The Seven Communities</h2>
     <p>Each expandable section lists notable characters, top attributes, a word cloud, and a brief interpretation.</p>
 
-    <!-- Community 0 -->
     <details>
       <summary><strong>Community 0 (Size 32)</strong></summary>
       <p><em>Notable Characters:</em> Yoda, Palpatine, Mace Windu…</p>
@@ -135,7 +130,6 @@
       <p><b>Interpretation:</b> words like “jedi”, “chancellor”, and “republic” highlight Republican themes and Clone Wars references.</p>
     </details>
 
-    <!-- Community 1 -->
     <details>
       <summary><strong>Community 1 (Size 2)</strong></summary>
       <p><em>Notable Characters:</em> Aayla, Bly…</p>
@@ -147,7 +141,6 @@
       <p>Very small pair; attribute overlap is minimal.</p>
     </details>
 
-    <!-- Community 2 -->
     <details>
       <summary><strong>Community 2 (Size 36)</strong></summary>
       <p><em>Notable Characters:</em> Luke, Han Solo, C-3PO…</p>
@@ -156,14 +149,13 @@
         <li><strong>Gender = Male:</strong> 58.3 % | 34.3 % | +24.0 %</li>
         <li><strong>Species = Human:</strong> 41.7 % | 25.2 % | +16.5 %</li>
       </ul>
-      <p>Mostly Episode IV–VI heroes and allies.</p>
+      <p>Mostly Episode IV-VI heroes and allies.</p>
       <img src="assets/community2_cloud.png"
            alt="Word cloud for Community 2 (Original Trilogy heroes)"
            class="word-cloud">
       <p><b>Interpretation:</b> frequent names like “Han”, “Chewie”, and “Jabba” tie this group to core Original Trilogy scenes.</p>
     </details>
 
-    <!-- Community 3 -->
     <details>
       <summary><strong>Community 3 (Size 2)</strong></summary>
       <p><em>Notable Characters:</em> OWO-1, TC-14…</p>
@@ -175,7 +167,6 @@
       <p>Only two droids linked by Trade Federation ties.</p>
     </details>
 
-    <!-- Community 4 -->
     <details>
       <summary><strong>Community 4 (Size 22)</strong></summary>
       <p><em>Notable Characters:</em> Biggs, Wedge, Tarkin…</p>
@@ -191,7 +182,6 @@
       <p><b>Interpretation:</b> terms like “frigate”, “fighter”, and “tractor” signal starship combat sequences.</p>
     </details>
 
-    <!-- Community 5 -->
     <details>
       <summary><strong>Community 5 (Size 53)</strong></summary>
       <p><em>Notable Characters:</em> Anakin, Obi-Wan, Padmé…</p>
@@ -207,7 +197,6 @@
       <p><b>Interpretation:</b> words like “chancellor”, “love”, and “master” highlight Anakin’s conflicted path.</p>
     </details>
 
-    <!-- Community 6 -->
     <details>
       <summary><strong>Community 6 (Size 5)</strong></summary>
       <p><em>Notable Characters:</em> Piett, Veers, Needa…</p>
@@ -224,7 +213,6 @@
     </details>
   </section>
 
-  <!-- ─────────────────────── INSIGHTS ─────────────────────── -->
   <section id="insights">
     <h2>Key Insights from the Galaxy</h2>
     <ul>
@@ -233,7 +221,6 @@
     </ul>
   </section>
 
-  <!-- ─────────────────────── DOWNLOADS ─────────────────────── -->
   <section id="downloads">
     <h2>Downloads & Explainer Notebook</h2>
     <ul>
@@ -258,7 +245,6 @@
     </ul>
   </section>
 
-  <!-- ─────────────────────── REFERENCES ─────────────────────── -->
   <section id="references">
     <h2>References</h2>
     <ul style="list-style-type:none;padding-left:0;">
@@ -268,7 +254,6 @@
     </ul>
   </section>
 
-  <!-- ─────────────────────── FOOTER ─────────────────────── -->
   <footer>
     <p>Made by Christian Nickelsen, Lucas Mortensen, Mads Højgaard • DTU</p>
     <p>May the Data Be With You</p>
