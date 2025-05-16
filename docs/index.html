@@ -19,52 +19,83 @@
 
   <section id="intro">
     <h2>Introduction: A Data Analysis in a Galaxy Far, Far Away...</h2>
-    <p>In this project, we analyze communication and conflict across the Star Wars universe using network and text analysis. The datasets includes characters, character attributes, and movie dialouges from the 6 first episodes. 
-      The data is gathered by web-scraping characters and character pages from Wookieepedia, and using StarWars API to fill out missing information. The movie scripts comes from a dataset</p>
-    <a href="data/starwars_dataset.csv" download class="download-link">Download Dataset</a>
+    <p>
+      This project is a Social Science Data Analysis of the Star Wars Universe from I-VI episodes. 
+      <br><br>
+      By using a dataset <a href="#references">[3]</a> containing all dialogues in the movie, we created a network. <br>
+      Each living being (node) was connected (with edges) to everyone else featured within a given scene.
+      By webscraping Wookieepedia <a href="#references">[1]</a> and applying Star Wars API (SWAPI) <a href="#references">[2]</a>, 
+      we added massive amounts of metadata to each node which greatly supported our analysis.
+      
+      <br><br>
+      <a href="../project/data/script_and_metadata.csv" download class="download-link">Download Dataset</a>
   </section>
 
   <section id="overview">
     <h2>Network Overview: Who connects the Galaxy?</h2>
     <p>Here’s a breakdown of the basic metrics of the Network, exploring central characters across the 6 episodes.</p>
-    <p>Number of nodes in Network:  152</p>
-    <p>Number of edges in Network:  623</p>
+  <section id="overview">
+  <h2>Network Overview: Who connects the Galaxy?</h2>
+  <p>Here’s a breakdown of the basic metrics of the Network, exploring central characters across the 6 episodes.</p>
 
-    <p><b>Degree:</b> Top 5 Characters with most connections</p>
-    <ul>
-      <li>C-3PO: 64 </li>
-      <li>Anakin: 58 </li>
-      <li>Obi-Wan: 58 </li>
-      <li>Padme: 58 </li>
-      <li>Luke: 44 </li>
-    </ul>
-    <p>Interpretation: These are the characters which are included in the most scenes, i.e. main characters (at least determined by screen time)</p>
-    
+  <table class="metric-table">
+    <colgroup><col><col></colgroup>
+    <thead>
+      <tr><th colspan="2">Network Size</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Number of nodes</td><td>152</td></tr>
+      <tr><td>Number of edges</td><td>623</td></tr>
+    </tbody>
+  </table>
 
-    <p><b>Centrality:</b> Which characters are bridges between groups</p>
-    <ul>
-      <li>C-3PO: 0.242 </li>
-      <li>Obi-Wan: 0.203 </li>
-      <li>Anakin: 0.150 </li>
-      <li>Padme: 0.149 </li>
-      <li>Luke: 0.110 </li>
-    </ul>
-    <p>Interpretation: C-3PO is the most common characters bridging gaps between otherwise unconnected nodes, i.e. he is in the "middle". The other characters represent this as well, although not as big scale.</p>
-    
+  <table class="metric-table">
+    <colgroup><col><col></colgroup>
+    <thead>
+      <tr><th colspan="2">Degree: Top 5 Characters with Most Connections</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>C-3PO</td><td>64</td></tr>
+      <tr><td>Anakin</td><td>58</td></tr>
+      <tr><td>Obi-Wan</td><td>58</td></tr>
+      <tr><td>Padme</td><td>58</td></tr>
+      <tr><td>Luke</td><td>44</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top: 0;">Interpretation: These are the characters with the most scene appearances—main characters based on screen time.</p>
 
-    <p><b>Closeness:</b> Who has access to others quickly? (in terms of dialogue chains)</p>
-    <ul>
-      <li>C-3PO: 0.614 </li>
-      <li>Obi-Wan: 0.596 </li>
-      <li>Anakin: 0.579 </li>
-      <li>Padme: 0.546 </li>
-      <li>Luke: 0.536 </li>
-    </ul>
-    <p>Interpretation: This displays the connectedness/closeness of characters. It makes sense that C-3PO is also close to many, as he is also connecting many in Centrality.</p>
+  <table class="metric-table">
+    <colgroup><col><col></colgroup>
+    <thead>
+      <tr><th colspan="2">Centrality: Who Bridges Between Groups</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>C-3PO</td><td>0.242</td></tr>
+      <tr><td>Obi-Wan</td><td>0.203</td></tr>
+      <tr><td>Anakin</td><td>0.150</td></tr>
+      <tr><td>Padme</td><td>0.149</td></tr>
+      <tr><td>Luke</td><td>0.110</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top: 0;">Interpretation: C-3PO stands out as a central bridge between character groups. Others follow with smaller roles as connectors.</p>
 
-    <p>Moreover, characters like Obi-Wan and Anakin rank highly, reflecting their roles as main parts of the story that make connections across different groups. High closeness indicates that these characters can rapidly distribute information or influence through our network, making them key characters of the plot.  </p>
+  <table class="metric-table">
+    <colgroup><col><col></colgroup>
+    <thead>
+      <tr><th colspan="2">Closeness: Who Reaches Others Quickly</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>C-3PO</td><td>0.614</td></tr>
+      <tr><td>Obi-Wan</td><td>0.596</td></tr>
+      <tr><td>Anakin</td><td>0.579</td></tr>
+      <tr><td>Padme</td><td>0.546</td></tr>
+      <tr><td>Luke</td><td>0.536</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top: 0;">Interpretation: These characters can spread information or influence quickly, reinforcing their importance to the overall story.</p>
 
-  </section>
+  <p style="margin-top: 1.5em;">Moreover, characters like Obi-Wan and Anakin rank highly, reflecting their central roles in connecting different plotlines. High closeness means they are narrative hubs in the network.</p>
+</section>
 
   <section id="network">
     <h2>Network Analysis: Communities</h2>
@@ -187,20 +218,20 @@
     <h2>Downloads & Explainer Notebook</h2>
     <p>Explore and replicate the analysis:</p>
     <ul>
-      <li><a href="data/cleaned_starwars.csv" download>Cleaned Dataset</a></li>
-      <li><a href="data/starwars_network.gexf" download>Network Graph File</a></li>
-      <li><a href="https://nbviewer.org/url/YOUR_NOTEBOOK_LINK_HERE" target="_blank">Explainer Notebook (nbviewer)</a></li>
+      <li><a href="../project/data/script_and_metadata.csv" download>Full Dataset (Both featuring all dialogues & all metadata for all characters)</a></li>
+      <li><a href="../project/data/graph_communities.zip" download>Graph and communities files (as .zip)</a></li>
+      <li><a href="https://nbviewer.org/github/murrodroid/StarWarsSocialScience/blob/main/project/src/main.ipynb" target="_blank">Explainer Notebook (nbviewer)</a></li>
     </ul>
   </section>
 
   <section id="references">
     <h2>References</h2>
     <ul style="list-style-type: none; padding-left: 0;">
-      <li>[1] Wookieepedia, *The Star Wars Wiki*, Fandom. [Online]. Available: https://starwars.fandom.com</li>
-      <li>[2] P. Hallett, *The Star Wars API (SWAPI)*. [Online]. Available: https://swapi.dev</li>
-      <li>[3] jcwieme, *data-scripts-star-wars*, Movie Scripts. [Online]. Available: https://github.com/jcwieme/data-scripts-star-wars</li></li>
-      <li>[4] </li>
-      <li>[5] </li>
+      <li>[1] Wookieepedia, *The Star Wars Wiki*, Fandom. [Online]. Available: <a href="https://starwars.fandom.com">here</a></li>
+      <li>[2] P. Hallett, *The Star Wars API (SWAPI)*. [Online]. Available: <a href="https://swapi.dev">here</a></li>
+      <li>[3] jcwieme, *data-scripts-star-wars*, Movie Scripts. [Online]. Available: <a href="https://github.com/jcwieme/data-scripts-star-wars">here</a></li></li>
+      <!-- <li>[4] </li>
+      <li>[5] </li> -->
     </ul>
   </section>
   
